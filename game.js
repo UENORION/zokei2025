@@ -11,7 +11,7 @@ let posX = 260;
 let posY = 160;
 
 // 移動速度
-const speed = 6;
+const speed = 3;
 
 // アニメーションフラグ
 let isWalking = false;
@@ -74,7 +74,7 @@ function gameLoop() {
     animationCounter++;
     
     // 10フレームごとにアニメーションを切り替え（移動中でも停止中でも）
-    if (animationCounter % 10 === 0) {
+    if (animationCounter % 40 === 0) {
         isWalking = !isWalking;
         sarubobo.src = isWalking ? saruboboWalking : saruboboStanding;
     }
